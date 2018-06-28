@@ -1,8 +1,11 @@
-# esl_words
 
-A new Flutter project.
+```
+rm -rf bin/cache
+flutter upgrade
+flutter channel beta
 
-## Getting Started
+flutter doctor -v
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+flutter run --release
+flutter run -v
+```
