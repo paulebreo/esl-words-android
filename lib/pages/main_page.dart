@@ -214,9 +214,9 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
                 itemBuilder: (BuildContext context, int index) {
                   String cat = snapshot.data[index];
                   try {
-                    t2 = "assets/" +globals.catimages[cat];
+                    t2 = "assets/images/" +globals.catimages[cat];
                   } catch(e) {
-                    t2 = "assets/smiley.png";
+                    t2 = "assets/images/smiley.png";
                   }
                 
                   return new  Column(
