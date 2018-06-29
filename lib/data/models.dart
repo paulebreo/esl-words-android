@@ -73,7 +73,7 @@ class WordModel extends Model {
     notifyListeners();
 
     // Load the data
-    _jsonData = json.decode(await rootBundle.loadString('assets/words5.json'));
+    _jsonData = json.decode(await rootBundle.loadString('assets/data/words5.json'));
 
     _mydata = await parseJsonData(_jsonData);
 

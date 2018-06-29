@@ -12,6 +12,7 @@ version: 1.0.0+1
 dependencies:
   flutter:
     sdk: flutter
+  meta: 1.1.5
   scoped_model: 0.2.0
   shared_preferences: "^0.4.2"
 
@@ -37,6 +38,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/data/words5.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:
