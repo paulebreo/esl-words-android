@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:esl_words/data/models.dart';
-// import 'package:esl_words/pages/main_page.dart';
+import 'package:esl_words/pages/main_page.dart';
 
 
 class LandingPage extends StatefulWidget {
@@ -33,9 +33,7 @@ class _LandingPageState extends State<LandingPage> {
     ):new Container();
 
     Widget _inkWell = new InkWell( // an invisible button
-        // onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new CategoryPage())),
-        // onTap: () => Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (BuildContext context) => new ComboWordsPage())),
-        onTap: () { print('tapped');},
+        onTap: () => Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (BuildContext context) => new ComboWordsPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

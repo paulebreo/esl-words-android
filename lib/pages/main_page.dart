@@ -1,13 +1,12 @@
 import 'dart:async';
 import "package:flutter/material.dart";
 import 'package:esl_words/data/globals.dart' as globals;
-import 'package:lyric_maker/esl/circletimer_page.dart';
-import 'package:lyric_maker/esl/words_page.dart';
-import 'package:lyric_maker/esl/randomword_page.dart';
-import 'package:lyric_maker/esl/useroptions_page.dart';
-import 'package:lyric_maker/ui/navigation_icon.dart';
-import 'package:lyric_maker/ui/choice.dart';
-
+import 'package:esl_words/pages/circletimer_page.dart';
+import 'package:esl_words/pages/words_page.dart';
+import 'package:esl_words/pages/randomword_page.dart';
+import 'package:esl_words/pages/useroptions_page.dart';
+import 'package:esl_words/ui/navigation_icon.dart';
+import 'package:esl_words/ui/choice.dart';
 
 
 class ComboWordsPage extends StatefulWidget {
@@ -318,25 +317,3 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
   
 }
 
-
-
-// List<Map<String, String>> selectedSubcats = [];
-
-//  new Column(crossAxisAlignment: CrossAxisAlignment.stretch,
-//     mainAxisSize: MainAxisSize.min, children: buildSubCatWordlist())
-
-
-//     void toggleSelection(Map<String,String> subcat) {
-      
-//       if(selectedSubcats.contains(subcat)){
-//         setState(() {
-//                   selectedSubcats.remove(subcat);
-//                 });        
-//       } else {
-//         setState(() {
-//         selectedSubcats.add(subcat);
-                  
-//                 });
-//       }
-//       print(selectedSubcats);
-//     }
