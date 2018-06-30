@@ -70,6 +70,23 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
 
       )
     ];
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => new AlertDialog(
+              title: new Text("title"),
+              content: new Text("Message"),
+              actions: <Widget>[
+                new FlatButton(
+                  child: new Text("OK"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+      );
+    });
   }
   
   
@@ -80,9 +97,14 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
     }
   }
  
+
+
   
   @override
   Widget build(BuildContext context) {
+      
+      
+
       
       void gotoRandom() {
         print('random');
@@ -244,6 +266,8 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
                 });
     };  
 
+  
+  
   Widget createListView(BuildContext context, AsyncSnapshot snapshot) {
       var buildCatLisView = new Container(padding: new EdgeInsets.all(0.0), height: 150.0,
         child: new ListView(
