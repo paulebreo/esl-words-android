@@ -64,7 +64,7 @@ class UserOptionsPageState extends State<UserOptionsPage> {
   List<String> _checkedValues;
   String _currentCheck;
 
-  bool switchValue = false;
+  bool _switchValue = false;
 
   Future<void> _changeTimerIsRandom(bool value) async {
     final SharedPreferences prefs = await _prefs;
@@ -93,6 +93,7 @@ class UserOptionsPageState extends State<UserOptionsPage> {
     super.initState();
     _currentCheck = _checkedValue1;
     getTimePreference().then(updateTime);
+    _switchValue = false;
   }
 
   @override
@@ -110,14 +111,14 @@ class UserOptionsPageState extends State<UserOptionsPage> {
                 return new ListTile(
                   title: const Text('Randomize words in timer'),
                   trailing: Switch(
-                      value: switchValue,
+                      value: _switchValue,
                       onChanged: (bool value) async {
-                        print("the switchvalue ${switchValue}");
+                        print("the switchvalue ${_switchValue}");
                         await _changeTimerIsRandom2(value);
                         setState(() {
-                          switchValue = value;
+                          _switchValue = value;
                         });
-                        print("the switchvalue after save ${switchValue}");
+                        print("the switchvalue after save ${_switchValue}");
                         saveIsRandom();
                       }),
                 );
@@ -166,8 +167,8 @@ class UserOptionsPageState extends State<UserOptionsPage> {
   }
 
   void saveIsRandom() {
-    saveIsRandomPreferences(switchValue).then((bool commited) {
-      print("switch value saved : ${switchValue}");
+    saveIsRandomPreferences(_switchValue).then((bool commited) {
+      print("switch value saved : ${_switchValue}");
     });
   }
   void saveTime() {
@@ -178,7 +179,7 @@ class UserOptionsPageState extends State<UserOptionsPage> {
 
   void updateIsRandom(bool isRandom) {
     setState(() {
-      switchValue = isRandom;
+      _switchValue = isRandom;
     });
   }
   void updateTime(String time) {
