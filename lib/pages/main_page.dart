@@ -8,6 +8,9 @@ import 'package:esl_words/pages/useroptions_page.dart';
 import 'package:esl_words/ui/navigation_icon.dart';
 import 'package:esl_words/ui/choice.dart';
 
+const String _instructions =
+  'Let Google help apps determine location. This means sending anonymous location '
+  'data to Google, even when no apps are running.';
 
 class ComboWordsPage extends StatefulWidget {
   @override
@@ -70,12 +73,18 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
 
       )
     ];
+
     WidgetsBinding.instance.addPostFrameCallback((_) async {
+      // TODO: only show instructions if a shared preference
+      //  switch is true
       await showDialog<String>(
         context: context,
         builder: (BuildContext context) => new AlertDialog(
-              title: new Text("title"),
-              content: new Text("Message"),
+              title: new Text("Instructions"),
+              content: new Text(
+                _instructions,
+                
+              ),
               actions: <Widget>[
                 new FlatButton(
                   child: new Text("OK"),
@@ -102,7 +111,6 @@ class _ComboWordsPageState extends State<ComboWordsPage> with TickerProviderStat
   
   @override
   Widget build(BuildContext context) {
-      
       
 
       
