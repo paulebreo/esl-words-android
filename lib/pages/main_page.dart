@@ -9,8 +9,10 @@ import 'package:esl_words/ui/navigation_icon.dart';
 import 'package:esl_words/ui/choice.dart';
 
 const String _instructions =
-  'Let Google help apps determine location. This means sending anonymous location '
-  'data to Google, even when no apps are running.';
+  'Thanks for using ESL Word Prompt!  To start, cilck on one of the categories at the top of screen. '
+  'The subcategories will then appear in the middle, and you can click on them, too. When you click '
+  'on the subcategories, you will have the choice of practicing Random words,'
+  'Timed words, or can browse the List of words.';
 
 class ComboWordsPage extends StatefulWidget {
   @override
