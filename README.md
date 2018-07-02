@@ -1,5 +1,8 @@
 ## Overview
-
+This app is to help beginner English speakers (ESL) practice expressing themselves
+through word prompts. Users can pick a category and subcategory of common words
+used in English and use those "prompt" words to try to form statements either
+by writing or saying  the first thing that comes to mind. 
 
 ## Development Setup
 The general steps for writing our first Android app using Flutter are:
@@ -26,6 +29,7 @@ flutter channel beta
 flutter run
 ```
 
+## How the app works
 
 
 #### Loading the data
