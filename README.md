@@ -31,6 +31,16 @@ flutter channel beta
 flutter run
 ```
 
+## Screenshots
+<p>
+<img src="https://github.com/paulebreo/esl-words-android/blob/master/screenshots/title.png" alt="title" width="250">
+<img src="https://github.com/paulebreo/esl-words-android/blob/master/screenshots/instructions.png" alt="instructions" width="250">
+<img src="https://github.com/paulebreo/esl-words-android/blob/master/screenshots/sports.png" alt="sports" width="250">
+<img src="https://github.com/paulebreo/esl-words-android/blob/master/screenshots/timed.png" alt="timed" width="250">
+<img src="https://github.com/paulebreo/esl-words-android/blob/master/screenshots/settings.png" alt="settings" width="250">
+
+</p>
+
 ## How the app works
 
 #### Loading the data
