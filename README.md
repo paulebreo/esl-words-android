@@ -2,7 +2,9 @@
 This app is to help beginner English speakers (ESL) practice expressing themselves
 through word prompts. Users can pick a category and subcategory of common words
 used in English and use those "prompt" words to try to form statements either
-by writing or saying  the first thing that comes to mind. 
+by writing or saying  the first thing that comes to mind.
+
+ There are three modes that users can practice with: timed, random, or list. 
 
 ## Development Setup
 The general steps for writing our first Android app using Flutter are:
@@ -31,7 +33,6 @@ flutter run
 
 ## How the app works
 
-
 #### Loading the data
 
 
@@ -46,7 +47,7 @@ flutter run
 
 ## Troubleshooting hints
 Since Flutter is still not v1.0, you might encounter
-version incompability errors because new features could 
+version incompability errors because new framework features could 
 break compatibility.
 
 This repo uses the `beta` channel which is the "stable" branch of the Flutter framework
@@ -58,15 +59,16 @@ version of Flutter. Also, you can try clearing the cache
 right before you upgrade to a new Flutter version.
 ```
 # run diagnostics in verbose mode if necessary
-flutter doctor -v
+`flutter doctor -v`
 
 # clear cache
-rm -rf bin/cache
+`rm -rf bin/cache`
 
 # switch to the right channel and upgrade
+```
 flutter channel beta
 flutter upgrade
-
+```
 # run with verbose mode if necessary
 flutter run -v
 ```
