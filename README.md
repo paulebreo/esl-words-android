@@ -44,11 +44,23 @@ flutter run
 ## How the app works
 
 #### Loading the data
-
+* The loading logic is contained in the `models.dart` and `landing_page.dart` files
+* The stateful widget `LandingPage` runs `buildLoadingIndicator` 
+* `buildLoadingIndicator` creates a scoped model widget using ScopedModelDescendant
+* We use tertiary syntax to check if `model.isLoading` is true, if so, display a progress circle, otherwise don't
+* We display the text which is defined in the `_inkWell` instance
 
 #### Listing the words feature
+* The logic for this feature is in the file `words_page.dart`
+* We initialize the `WordsPage` stateless widget by assigning `_subcategoryWords` using the `getAllSubcategoryWords()` method
+* We then use a ListView builder and create new ListTiles for each word in the `_subcategoryWords`
+* Each new tile is a word in that particular subcategory of words
 
 #### Random words feature
+* The logic for this feature is in the file `randomword_page.dart`
+* Display a word `_currentWord` which is from use `_subcategorywords.last`
+* We use the `removeLast()` method to remove the last element from `_subCategorywords`
+which means we have fewer words in the list
 
 #### Timed words feature
 
